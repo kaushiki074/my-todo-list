@@ -23,8 +23,6 @@ h2 {
   margin-bottom: 40px;
 }
 
-/* Add Task Button */
-
 .container > button {
   display: block;
   margin: auto;
@@ -40,11 +38,9 @@ h2 {
   box-shadow: 0 10px 25px rgba(255, 90, 82, .3);
 }
 
-.container>button:hover {
+.container > button:hover {
   transform: scale(1.05);
 }
-
-/* Add Task Form */
 
 .container div {
   margin-top: 20px;
@@ -75,8 +71,6 @@ input[type="radio"] {
   margin-right: 6px;
 }
 
-/* Form Buttons */
-
 .container div button {
   margin-right: 15px;
   margin-top: 20px;
@@ -98,8 +92,6 @@ input[type="radio"] {
   color: #0d2b72;
 }
 
-/* Filter */
-
 select {
   float: right;
   padding: 10px 18px;
@@ -108,11 +100,9 @@ select {
   border: 2px solid #0d2b72;
   color: #0d2b72;
   background: white;
-  margin-top:5px;
-  margin-bottom:50px;
+  margin-top: 5px;
+  margin-bottom: 50px;
 }
-
-/* Task Card */
 
 .profile-card {
   clear: both;
@@ -130,17 +120,19 @@ select {
 .profile-card h2 {
   color: #0d2b72;
   font-size: 42px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   text-align: left;
 }
 
-.profile-card p {
+.status-label {
   font-size: 26px;
   color: #555;
   margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-/* Accordion Open Container Styling */
 .task-details {
   display: flex;
   justify-content: space-between;
@@ -149,11 +141,18 @@ select {
   width: 100%;
 }
 
-/* Buttons inside card */
+.task-details p {
+  font-size: 22px;
+  color: #555;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
 
 .profile-card button {
-  margin-top: 20px;
-  margin-right: 15px;
   padding: 15px 35px;
   border: none;
   border-radius: 30px;
@@ -171,8 +170,6 @@ select {
   background: #ff5a52;
   color: white;
 }
-
-/* Edit Card */
 
 .edit-card {
   background: white;
@@ -243,8 +240,6 @@ select {
   white-space: nowrap;
 }
 
-/* Empty Text */
-
 .container p:last-child {
   text-align: center;
   margin-top: 30px;
@@ -257,133 +252,117 @@ select {
   clear: both;
 }
 
-/* Responsive */
-
-@media (max-width:768px) {
-
-  h1 {
-    font-size: 45px;
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .container {
+    width: 85%;
   }
-
+  h2 {
+    font-size: 48px;
+  }
   .profile-card h2 {
-    font-size: 28px;
+    font-size: 36px;
   }
-
-  .profile-card p {
-    font-size: 18px;
-  }
-
-  select {
-    float: none;
-    width: 100%;
-  }
-
-  .container>button {
-    width: 100%;
-  }
-
 }
 
-/* Laptop */
-
-@media (max-width:1200px) {
-
+@media (min-width: 769px) and (max-width: 1024px) {
   .container {
     width: 90%;
   }
-
-  h1 {
-    font-size: 50px;
-  }
-
-  .profile-card h2 {
-    font-size: 26px;
-  }
-
-  .profile-card p {
-    font-size: 19px;
-  }
-
-}
-
-/* Tablet */
-
-@media (max-width:768px) {
-
-  .container {
-    width: 95%;
-  }
-
-  h1 {
+  h2 {
     font-size: 40px;
   }
-
-  .container>button {
-    width: 100%;
-    font-size: 18px;
-  }
-
-  select {
-    width: 100%;
-    float: none;
-    margin: 20px 0;
-  }
-
-  .profile-card,
-  .edit-card {
-    padding: 20px;
-  }
-
   .profile-card h2 {
-    font-size: 24px;
+    font-size: 30px;
   }
+}
 
-  .profile-card p {
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    width: 92%;
+  }
+  h2 {
+    font-size: 34px;
+  }
+  .container > button {
     font-size: 17px;
+    padding: 12px 32px;
   }
-
-  .profile-card button,
-  .edit-card button {
-    width: 100%;
-    margin-top: 12px;
+  .profile-card, .edit-card {
+    padding: 22px;
   }
-
-  label {
-    display: block;
-    margin: 12px 0;
-  }
-
   .task-details {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
   }
-
+  .date {
+    text-align: left;
+  }
+  .form-action-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
-/* Mobile */
-
-@media (max-width:480px) {
-
-  h1 {
-    font-size: 32px;
+@media (max-width: 480px) {
+  .container {
+    width: 94%;
+    padding: 15px 0;
   }
-
+  h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .container > button {
+    display: block;
+    margin: 0 auto 20px auto;
+    font-size: 16px;
+    padding: 12px 28px;
+  }
+  select {
+    width: 130px;
+    float: right;
+    margin-bottom: 15px;
+  }
+  .profile-card, .edit-card {
+    padding: 18px;
+    border-radius: 15px;
+  }
   .profile-card h2 {
-    font-size: 21px;
+    font-size: 22px;
   }
-
-  .profile-card p {
-    font-size: 16px;
+  .task-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
-
-  .container>button {
-    padding: 14px 25px;
-    font-size: 17px;
+  .date {
+    text-align: left;
   }
-
-  input[type=text] {
-    font-size: 16px;
+  .form-action-row {
+    display: flex;
+    flex-direction: row; /* Ensures buttons stick to the right even on mobile */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
-
+  .form-radio-group {
+    display: flex;
+    flex-direction: column; /* Radios stack closely to save horizontal space */
+    align-items: flex-start;
+    gap: 4px;
+  }
+  label {
+    margin-right: 0;
+    font-size: 14px;
+  }
+  .form-buttons-group {
+    display: flex;
+    gap: 8px;
+  }
+  .form-buttons-group button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
 }
