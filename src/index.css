@@ -1,0 +1,31 @@
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Root */
+
+html,
+body,
+#root{
+    width:100%;
+    min-height:100vh;
+}
+
+/* Body */
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f7fc;
+    color:#132a63;
+    overflow-x:hidden;
+}
+
+/* Root container */
+
+#root{
+    width:100%;
+}

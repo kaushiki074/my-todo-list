@@ -1,0 +1,389 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f4f7fc;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 56px;
+  color: #0d2b72;
+  margin-bottom: 40px;
+}
+
+/* Add Task Button */
+
+.container > button {
+  display: block;
+  margin: auto;
+  background: #ff5a52;
+  color: white;
+  border: none;
+  padding: 16px 38px;
+  font-size: 20px;
+  border-radius: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+  box-shadow: 0 10px 25px rgba(255, 90, 82, .3);
+}
+
+.container>button:hover {
+  transform: scale(1.05);
+}
+
+/* Add Task Form */
+
+.container div {
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  margin: 12px 0;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  font-size: 18px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  background: white;
+  border: 2px solid #0d2b72;
+  outline: none;
+}
+
+label {
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+input[type="radio"] {
+  margin-right: 6px;
+}
+
+/* Form Buttons */
+
+.container div button {
+  margin-right: 15px;
+  margin-top: 20px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.container div button:first-of-type {
+  background: #ff5a52;
+  color: white;
+}
+
+.container div button:last-of-type {
+  background: #dfe4ef;
+  color: #0d2b72;
+}
+
+/* Filter */
+
+select {
+  float: right;
+  padding: 10px 18px;
+  font-size: 18px;
+  border-radius: 15px;
+  border: 2px solid #0d2b72;
+  color: #0d2b72;
+  background: white;
+  margin-top:5px;
+  margin-bottom:50px;
+}
+
+/* Task Card */
+
+.profile-card {
+  clear: both;
+  background: white;
+  border-radius: 25px;
+  padding: 30px;
+  margin: 30px 0;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, .08);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-card h2 {
+  color: #0d2b72;
+  font-size: 42px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.profile-card p {
+  font-size: 26px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* Accordion Open Container Styling */
+.task-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  width: 100%;
+}
+
+/* Buttons inside card */
+
+.profile-card button {
+  margin-top: 20px;
+  margin-right: 15px;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.profile-card button:first-of-type {
+  background: #dfe4ef;
+  color: #0d2b72;
+}
+
+.profile-card button:last-of-type {
+  background: #ff5a52;
+  color: white;
+}
+
+/* Edit Card */
+
+.edit-card {
+  background: white;
+  border-radius: 25px;
+  padding: 30px;
+  margin: 30px 0;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, .08);
+}
+
+.edit-card input[type="text"] {
+  margin-bottom: 15px;
+}
+
+.edit-card button {
+  margin-top: 20px;
+  margin-right: 15px;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.edit-card button:first-of-type {
+  background: #ff5a52;
+  color: white;
+}
+
+.edit-card button:last-of-type {
+  background: #dfe4ef;
+  color: #0d2b72;
+}
+
+.edit-card input[type="text"] {
+  width: 100%;
+  background: #eef1f8;
+  border: 2px solid transparent;
+  border-radius: 40px;
+  padding: 18px 28px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #0d2b72;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.edit-card input[type="text"]:hover {
+  background: #e8edf8;
+}
+
+.edit-card input[type="text"]:focus {
+  background: #ffffff;
+  border: 2px solid #17357b;
+  box-shadow: 0 0 0 4px rgba(23, 53, 123, 0.08);
+}
+
+.save-btn {
+  background: #0d2b72 !important;
+  color: white !important;
+}
+
+.date {
+  font-size: 18px;
+  color: #777;
+  margin: 0;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Empty Text */
+
+.container p:last-child {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 22px;
+  color: gray;
+}
+
+.edit-card,
+.profile-card {
+  clear: both;
+}
+
+/* Responsive */
+
+@media (max-width:768px) {
+
+  h1 {
+    font-size: 45px;
+  }
+
+  .profile-card h2 {
+    font-size: 28px;
+  }
+
+  .profile-card p {
+    font-size: 18px;
+  }
+
+  select {
+    float: none;
+    width: 100%;
+  }
+
+  .container>button {
+    width: 100%;
+  }
+
+}
+
+/* Laptop */
+
+@media (max-width:1200px) {
+
+  .container {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  .profile-card h2 {
+    font-size: 26px;
+  }
+
+  .profile-card p {
+    font-size: 19px;
+  }
+
+}
+
+/* Tablet */
+
+@media (max-width:768px) {
+
+  .container {
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .container>button {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  select {
+    width: 100%;
+    float: none;
+    margin: 20px 0;
+  }
+
+  .profile-card,
+  .edit-card {
+    padding: 20px;
+  }
+
+  .profile-card h2 {
+    font-size: 24px;
+  }
+
+  .profile-card p {
+    font-size: 17px;
+  }
+
+  .profile-card button,
+  .edit-card button {
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  label {
+    display: block;
+    margin: 12px 0;
+  }
+
+  .task-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width:480px) {
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .profile-card h2 {
+    font-size: 21px;
+  }
+
+  .profile-card p {
+    font-size: 16px;
+  }
+
+  .container>button {
+    padding: 14px 25px;
+    font-size: 17px;
+  }
+
+  input[type=text] {
+    font-size: 16px;
+  }
+
+}
